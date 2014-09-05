@@ -1,0 +1,2 @@
+#TargetFrameworkVersion=v4.0:PlatformToolSet=v120:EnableManagedIncrementalBuild=false:VCToolArchitecture=Native32Bit
+Debug|Win32|C:\Program Files\OpenNI2\3rd Party\GrabDetector\Demo\Samples\GrabViewer\|

@@ -1,0 +1,251 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="12.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="main.cpp" />
+    <ClCompile Include="Viewer.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Viewer.h" />
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{3FEC5334-28E2-4E84-94CF-3E33A8DD1D53}</ProjectGuid>
+    <RootNamespace>GrabViewer_VS2008</RootNamespace>
+    <Keyword>Win32Proj</Keyword>
+    <ProjectName>OpenTemp</ProjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <PlatformToolset>v120</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <PlatformToolset>v120</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <PlatformToolset>v120</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <PlatformToolset>v120</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>12.0.21005.1</_ProjectFileVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <OutDir>$(SolutionDir)$(Platform)\$(Configuration)_VS2008\</OutDir>
+    <IntDir>$(Platform)\$(Configuration)_VS2008\</IntDir>
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <OutDir>$(SolutionDir)$(Platform)\$(Configuration)_VS2008\</OutDir>
+    <IntDir>$(Platform)\$(Configuration)_VS2008\</IntDir>
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <OutDir>$(SolutionDir)$(Platform)\$(Configuration)_VS2008\</OutDir>
+    <IntDir>$(Platform)\$(Configuration)_VS2008\</IntDir>
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <OutDir>$(SolutionDir)$(Platform)\$(Configuration)_VS2008\</OutDir>
+    <IntDir>$(Platform)\$(Configuration)_VS2008\</IntDir>
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <AdditionalIncludeDirectories>$(NITE2_INCLUDE);$(OPENNI2_INCLUDE);..\..\;..\GL;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MinimalRebuild>true</MinimalRebuild>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <PrecompiledHeader />
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
+    </ClCompile>
+    <Link>
+      <AdditionalDependencies>NiTE2.lib;OpenNI2.lib;glut32.lib;GrabDetector.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>$(NITE2_LIB);$(OPENNI2_LIB);..\..\Win32\Release;..\GL;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Console</SubSystem>
+      <TargetMachine>MachineX86</TargetMachine>
+      <ImageHasSafeExceptionHandlers>false</ImageHasSafeExceptionHandlers>
+    </Link>
+    <PostBuildEvent>
+      <Command>%40ECHO Copying OpenNI runtime files
+%40IF NOT EXIST "$(TargetDir)OpenNI2.dll" XCOPY /E /Y /Q /D "$(OPENNI2_REDIST)OpenNI2*" "$(TargetDir)" &gt;NUL
+%40IF NOT EXIST "$(TargetDir)OpenNI2\Drivers\*.dll" XCOPY /E /Y /Q /D "$(OPENNI2_REDIST)OpenNI2\Drivers\*.*" "$(TargetDir)OpenNI2\Drivers\"
+
+%40ECHO Copying NiTE runtime files
+%40IF NOT EXIST "$(TargetDir)Nite2.dll" XCOPY  /Y /Q /D "$(NITE2_REDIST)Nite2.dll" "$(TargetDir)" &gt;NUL
+
+%40ECHO Copying Grab DLL
+%40IF NOT EXIST "$(TargetDir)GrabDetector.dll" XCOPY /Y /Q /D "$(ProjectDir)..\..\Win32\Release\GrabDetector.dll" "$(TargetDir)" &gt;NUL
+
+%40ECHO Copying Grab Data folder
+%40IF NOT EXIST "$(TargetDir)Data\" XCOPY /E /Y /Q /D "$(ProjectDir)..\..\GrabDetector\Data\*.*" "$(TargetDir)Data\"
+
+%40ECHO Copying GLUT DLL
+%40IF NOT EXIST "$(TargetDir)glut32.dll"  XCOPY /Y /Q /D "..\GL\glut32.dll" "$(TargetDir)" &gt;NUL
+</Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Midl>
+      <TargetEnvironment>X64</TargetEnvironment>
+    </Midl>
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <AdditionalIncludeDirectories>$(NITE2_INCLUDE64);$(OPENNI2_INCLUDE64);..\..\;..\GL;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MinimalRebuild>true</MinimalRebuild>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <PrecompiledHeader />
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+    </ClCompile>
+    <Link>
+      <AdditionalDependencies>NiTE2.lib;OpenNI2.lib;glut64.lib;GrabDetector.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>$(NITE2_LIB64);$(OPENNI2_LIB64);..\..\x64\Release;..\GL;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Console</SubSystem>
+      <TargetMachine>MachineX64</TargetMachine>
+    </Link>
+    <PostBuildEvent>
+      <Command>%40ECHO Copying OpenNI runtime files
+%40IF NOT EXIST "$(TargetDir)OpenNI2.dll" XCOPY /E /Y /Q /D "$(OPENNI2_REDIST64)OpenNI2*" "$(TargetDir)" &gt;NUL
+%40IF NOT EXIST "$(TargetDir)OpenNI2\Drivers\*.dll" XCOPY /E /Y /Q /D "$(OPENNI2_REDIST64)OpenNI2\Drivers\*.*" "$(TargetDir)OpenNI2\Drivers\"
+
+%40ECHO Copying NiTE runtime files
+%40IF NOT EXIST "$(TargetDir)Nite2.dll" XCOPY  /Y /Q /D "$(NITE2_REDIST64)Nite2.dll" "$(TargetDir)" &gt;NUL
+
+%40ECHO Copying Grab DLL
+%40IF NOT EXIST "$(TargetDir)GrabDetector.dll" XCOPY /Y /Q /D "$(ProjectDir)..\..\x64\Release\GrabDetector.dll" "$(TargetDir)" &gt;NUL
+
+%40ECHO Copying Grab Data folder
+%40IF NOT EXIST "$(TargetDir)Data\" XCOPY /E /Y /Q /D "$(ProjectDir)..\..\GrabDetector\Data\*.*" "$(TargetDir)Data\"
+
+%40ECHO Copying GLUT DLL
+%40IF NOT EXIST "$(TargetDir)glut64.dll"  XCOPY /Y /Q /D "$(OPENNI2_INCLUDE64)..\ThirdParty\GL\glut64.dll" "$(TargetDir)" &gt;NUL
+</Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>$(NITE2_INCLUDE);$(OPENNI2_INCLUDE);..\..\;..\GL;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <PrecompiledHeader />
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+    </ClCompile>
+    <Link>
+      <AdditionalDependencies>NiTE2.lib;OpenNI2.lib;glut32.lib;GrabDetector.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>$(NITE2_LIB);$(OPENNI2_LIB);..\..\Win32\Release;..\GL;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Console</SubSystem>
+      <OptimizeReferences>true</OptimizeReferences>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <TargetMachine>MachineX86</TargetMachine>
+      <ImageHasSafeExceptionHandlers>false</ImageHasSafeExceptionHandlers>
+    </Link>
+    <PostBuildEvent>
+      <Command>%40ECHO Copying OpenNI runtime files
+%40IF NOT EXIST "$(TargetDir)OpenNI2.dll" XCOPY /E /Y /Q /D "$(OPENNI2_REDIST)OpenNI2*" "$(TargetDir)" &gt;NUL
+%40IF NOT EXIST "$(TargetDir)OpenNI2\Drivers\*.dll" XCOPY /E /Y /Q /D "$(OPENNI2_REDIST)OpenNI2\Drivers\*.*" "$(TargetDir)OpenNI2\Drivers\"
+
+%40ECHO Copying NiTE runtime files
+%40IF NOT EXIST "$(TargetDir)Nite2.dll" XCOPY  /Y /Q /D "$(NITE2_REDIST)Nite2.dll" "$(TargetDir)" &gt;NUL
+
+%40ECHO Copying Grab DLL
+%40IF NOT EXIST "$(TargetDir)GrabDetector.dll" XCOPY /Y /Q /D "$(ProjectDir)..\..\Win32\Release\GrabDetector.dll" "$(TargetDir)" &gt;NUL
+
+%40ECHO Copying Grab Data folder
+%40IF NOT EXIST "$(TargetDir)Data\" XCOPY /E /Y /Q /D "$(ProjectDir)..\..\GrabDetector\Data\*.*" "$(TargetDir)Data\"
+
+%40ECHO Copying GLUT DLL
+%40IF NOT EXIST "$(TargetDir)glut32.dll"  XCOPY /Y /Q /D "..\GL\glut32.dll" "$(TargetDir)" &gt;NUL
+</Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Midl>
+      <TargetEnvironment>X64</TargetEnvironment>
+    </Midl>
+    <ClCompile>
+      <AdditionalIncludeDirectories>$(NITE2_INCLUDE64);$(OPENNI2_INCLUDE64);..\..\;..\GL;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <PrecompiledHeader />
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+    </ClCompile>
+    <Link>
+      <AdditionalDependencies>NiTE2.lib;OpenNI2.lib;glut64.lib;GrabDetector.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>$(NITE2_LIB64);$(OPENNI2_LIB64);..\..\x64\Release;..\GL;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Console</SubSystem>
+      <OptimizeReferences>true</OptimizeReferences>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <TargetMachine>MachineX64</TargetMachine>
+    </Link>
+    <PostBuildEvent>
+      <Command>%40ECHO Copying OpenNI runtime files
+%40IF NOT EXIST "$(TargetDir)OpenNI2.dll" XCOPY /E /Y /Q /D "$(OPENNI2_REDIST64)OpenNI2*" "$(TargetDir)" &gt;NUL
+%40IF NOT EXIST "$(TargetDir)OpenNI2\Drivers\*.dll" XCOPY /E /Y /Q /D "$(OPENNI2_REDIST64)OpenNI2\Drivers\*.*" "$(TargetDir)OpenNI2\Drivers\"
+
+%40ECHO Copying NiTE runtime files
+%40IF NOT EXIST "$(TargetDir)Nite2.dll" XCOPY  /Y /Q /D "$(NITE2_REDIST64)Nite2.dll" "$(TargetDir)" &gt;NUL
+
+%40ECHO Copying Grab DLL
+%40IF NOT EXIST "$(TargetDir)GrabDetector.dll" XCOPY /Y /Q /D "$(ProjectDir)..\..\x64\Release\GrabDetector.dll" "$(TargetDir)" &gt;NUL
+
+%40ECHO Copying Grab Data folder
+%40IF NOT EXIST "$(TargetDir)Data\" XCOPY /E /Y /Q /D "$(ProjectDir)..\..\GrabDetector\Data\*.*" "$(TargetDir)Data\"
+
+%40ECHO Copying GLUT DLL
+%40IF NOT EXIST "$(TargetDir)glut64.dll"  XCOPY /Y /Q /D "$(OPENNI2_INCLUDE64)..\ThirdParty\GL\glut64.dll" "$(TargetDir)" &gt;NUL
+</Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
